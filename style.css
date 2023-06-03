@@ -280,10 +280,6 @@ input[type="text"] {
 .person>div>p{
     font-weight: normal;
 }
-.transitioning:hover,.button:hover{
-    transform: scale(1.1);
-    transition: 1s;
-}
 #pfp,#bigpfp{
     background-image: url(assets/profile.svg);
 }
@@ -306,13 +302,32 @@ input[type="text"] {
 .animate:hover{
     transform: scale(1.1);
     transition: 0.5s;
+    cursor:pointer;
+}
+.animate:active{
+    transform: scale(1);
+    transition: 0s;
 }
 .animate2:hover{
     transform: scale(1.2);
     transition: 0.2s;
+    cursor:pointer;
+}
+.transitioning:hover,.button:hover{
+    transform: scale(1.1);
+    transition: 1s;
+    cursor:pointer;
+}
+.animate:active{
+    transform: scale(1);
+    transition: 0s;
 }
 .animate2:active{
     transform: scale(1.1);
+    transition: 0s;
+}
+.transitioning:active,.button:active{
+    transform: scale(1.05);
     transition: 0s;
 }
 a{
