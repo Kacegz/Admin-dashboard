@@ -5,6 +5,7 @@
     --darkgrey:#9BA4B5;
     --lightgrey:#F1F6F9;
     --star:#D5AB55;
+    --gradient:linear-gradient(to right bottom, #050e40, #0a174b, #102157, #152a62, #1a346e, #1e3671, #213973, #253b76, #273770, #29326a, #2a2e64, #2b2a5e);
 }
 html,body{
     margin:0;
@@ -15,6 +16,20 @@ html,body{
 p,h4,h3,h1{
     margin: 0;
 }
+input[type="text"] {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    border: none;
+    outline: none;
+    background: none;
+    padding: 0;
+    margin: 0;
+    font-size: 1.3rem;
+    color:var(--lightgrey);
+    padding-left: 10px;
+    font-weight: bold;
+  }
 #container{
     display: grid;
     grid-template-columns: 2fr 10fr;
@@ -23,18 +38,21 @@ p,h4,h3,h1{
 }
 #sidebar{
     grid-area: 1/1/3/1;
-    background-color: var(--darkblue);
+    background-image: linear-gradient(to left, #20417e, #1a346e, #13275e, #0c1a4f, #050e40);
 }
 #content{
     grid-area: 2/2/3/3;
-    background-color: var(--darkgrey);
+    background-image: linear-gradient(to left, #050e40, #0d1345, #15194b, #1b1e50, #222356, #25275b, #272c61, #2a3066, #29346c, #273872, #243d78, #20417e);
     display: grid;
     grid-template-columns: 4fr 1fr;
     grid-template-rows: 3fr 2fr;
     padding: 20px;
 }
+#content>div>p{
+    color: white;
+}
 #header{
-    background-color: var(--lightblue);
+    background-image: linear-gradient(to left, #050e40, #0d1345, #15194b, #1b1e50, #222356, #25275b, #272c61, #2a3066, #29346c, #273872, #243d78, #20417e);;;
     display: grid;
     grid-template-columns: 5fr 5fr;
     grid-template-rows: 1fr 1fr;
@@ -57,7 +75,6 @@ p,h4,h3,h1{
 }
 #logo{
     height: 10vh;
-    background-color: var(--darkblue);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -97,7 +114,12 @@ p,h4,h3,h1{
 #magnifying:hover{
     background-color: rgba(255,255,255,0.3);
 }
+#magnifying:active{
+    transform: scale(0.9);
+    transition: 0s;
+}
 #searchbar{
+    appearance: none;
     background-color: var(--darkgrey);
     border-radius: 20px;
     height: 4vh;
@@ -179,10 +201,6 @@ p,h4,h3,h1{
     font-weight: normal;
     color:grey;
 }
-.person>div>p{
-    font-weight: normal;
-    
-}
 
 #icons{
     display: flex;
@@ -257,9 +275,10 @@ p,h4,h3,h1{
     gap:10px;
     justify-items: center;
     align-items: center;
+    padding-left: 15px;
 }
-.person>p{
-    inline-size: min-content;
+.person>div>p{
+    font-weight: normal;
 }
 .transitioning:hover,.button:hover{
     transform: scale(1.1);
@@ -279,7 +298,25 @@ p,h4,h3,h1{
 #person{
     background-image: url(assets/person.svg);
 }
+
 #robot{
     background-image: url(assets/robot.svg);
     background-size: contain;
+}
+.animate:hover{
+    transform: scale(1.1);
+    transition: 0.5s;
+}
+.animate2:hover{
+    transform: scale(1.2);
+    transition: 0.2s;
+}
+.animate2:active{
+    transform: scale(1.1);
+    transition: 0s;
+}
+a{
+    appearance: none;
+    text-decoration: none;
+    color: black;
 }
