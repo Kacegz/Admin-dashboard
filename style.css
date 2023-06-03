@@ -94,9 +94,6 @@ input[type="text"] {
     gap:10px;
     color: whitesmoke;
 }
-#nav>div>span{
-    font-size: 2rem;
-}
 .navicon{
     filter: invert(1000%);
 }
