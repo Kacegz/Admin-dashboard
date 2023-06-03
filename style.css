@@ -33,7 +33,7 @@ input[type="text"] {
 #container{
     display: grid;
     grid-template-columns: 2fr 10fr;
-    grid-template-rows: 1fr 7fr;
+    grid-template-rows: 1fr 8fr;
     font-size: 1.1rem;
 }
 #sidebar{
@@ -54,7 +54,7 @@ input[type="text"] {
 #header{
     background-image: linear-gradient(to left, #050e40, #0d1345, #15194b, #1b1e50, #222356, #25275b, #272c61, #2a3066, #29346c, #273872, #243d78, #20417e);;;
     display: grid;
-    grid-template-columns: 5fr 5fr;
+    grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     padding-bottom: 2vh;
     padding-right: 3vw;
@@ -102,7 +102,6 @@ input[type="text"] {
 }
 #search{
     display: flex;
-    flex:1;
     align-items: center;
     gap:10px;
 }
@@ -147,6 +146,7 @@ input[type="text"] {
 #welcome{
     display: flex;
     gap:20px;
+    align-items: center;
 }
 #welcomemessage{
     display: flex;
