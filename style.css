@@ -18,7 +18,7 @@ p,h4,h3,h1{
 #container{
     display: grid;
     grid-template-columns: 2fr 10fr;
-    grid-template-rows: 1fr 6fr;
+    grid-template-rows: 1fr 7fr;
     font-size: 1.1rem;
 }
 #sidebar{
@@ -30,7 +30,7 @@ p,h4,h3,h1{
     background-color: var(--darkgrey);
     display: grid;
     grid-template-columns: 4fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 3fr 2fr;
     padding: 20px;
 }
 #header{
@@ -45,18 +45,31 @@ p,h4,h3,h1{
 #sidebar{
     display: flex;
     flex-direction: column;
-    gap:50px
+    gap:50px;
+    padding-top:20px;
 }
 #nav{
     display: grid;
     color:white;
     font-size: 1.5rem;
     justify-items: center;
-    gap:20px;
+    gap:30px;
 }
 #logo{
     height: 10vh;
     background-color: var(--darkblue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:10px;
+}
+#logo>img{
+    height: 10vh;
+
+}
+#logo>span{
+    font-size: 2rem;
+    color: white;
 }
 #nav>div{
     height: 5vh;
@@ -77,10 +90,12 @@ p,h4,h3,h1{
     gap:10px;
 }
 #magnifying{
-    background-color: white;
-    width: 2vw;
-    height: 2vw;
+    width: 3vw;
+    height: 3vw;
     border-radius: 50%;
+}
+#magnifying:hover{
+    background-color: rgba(255,255,255,0.3);
 }
 #searchbar{
     background-color: var(--darkgrey);
@@ -92,7 +107,7 @@ p,h4,h3,h1{
     display: flex;
     justify-content: end;
     align-items: center;
-    gap:20px;
+    gap:30px;
     color: white;
     font-size: 1.3rem;
     font-weight: bold;
@@ -101,8 +116,11 @@ p,h4,h3,h1{
 #user>#pfp,#notification{
     width:50px;
     height: 50px;
-    background-color: white;
-    border-radius: 50%;
+}
+#notification{
+    background-image: url("assets/notifs.svg");
+    background-size: contain;
+    
 }
 #welcome{
     display: flex;
@@ -173,10 +191,20 @@ p,h4,h3,h1{
     gap:20px;
 }
 #icons>div{
-    background-color: var(--star);
     width: 30px;
     height: 30px;
-    border-radius: 50%;
+}
+.share{
+    background-image: url("assets/share.svg");
+    background-size: contain;
+}
+.follow{
+    background-image: url("assets/follow.svg");
+    background-size: contain;
+}
+.star{
+    background-image: url("assets/star.svg");
+    background-size: contain;
 }
 #announcements{
     display: flex;
@@ -188,7 +216,7 @@ p,h4,h3,h1{
     padding: 20px;
 }
 .announcement{
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     
 }
 #content>:nth-child(2){
@@ -207,8 +235,8 @@ p,h4,h3,h1{
 #trending{
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
+    align-items: stretch;
+    justify-content: space-evenly;
     background-color: var(--lightgrey);
     border-radius: 20px;
     padding: 10px;
@@ -219,7 +247,7 @@ p,h4,h3,h1{
     margin-top: 1vh;
 }
 .pfpsmall{
-    width: 60px;
+    width: 60px !important;
     height: 60px;
     border-radius: 50%;
     background-color: white;
@@ -229,4 +257,29 @@ p,h4,h3,h1{
     gap:10px;
     justify-items: center;
     align-items: center;
+}
+.person>p{
+    inline-size: min-content;
+}
+.transitioning:hover,.button:hover{
+    transform: scale(1.1);
+    transition: 1s;
+}
+#pfp,#bigpfp{
+    background-image: url(assets/profile.svg);
+}
+#dog{
+    background-image: url(assets/dog.svg);
+    background-size: contain;
+}
+#vader{
+    background-image: url(assets/vader.svg);
+    background-size:contain;
+}
+#person{
+    background-image: url(assets/person.svg);
+}
+#robot{
+    background-image: url(assets/robot.svg);
+    background-size: contain;
 }
