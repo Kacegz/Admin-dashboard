@@ -44,7 +44,7 @@ input[type="text"] {
     grid-area: 2/2/3/3;
     background-image: linear-gradient(to left, #050e40, #0d1345, #15194b, #1b1e50, #222356, #25275b, #272c61, #2a3066, #29346c, #273872, #243d78, #20417e);
     display: grid;
-    grid-template-columns: 4fr 1fr;
+    grid-template-columns: 3fr 1fr;
     grid-template-rows: 3fr 2fr;
     padding: 20px;
 }
